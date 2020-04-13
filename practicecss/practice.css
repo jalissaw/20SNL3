@@ -1,0 +1,181 @@
+ *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Abel;
+} 
+
+header{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(219, 65, 142);
+    overflow: hidden;
+    z-index: 20;
+}
+
+header:after{
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    height: 100vh;
+    width: 25%;
+    background-color: rgb(177, 34, 134);
+    z-index: -10;
+    animation-name: right;
+    animation-timing-function: ease-in; 
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes right {
+    0% {width: 0px;};
+    100% {width: 100px;}
+}
+/* -----Navbar------ */
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.navbar .links {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.navbar .link:first-child{
+    background-color: rgb(253, 156, 211);
+    border-radius: 5px;
+}
+
+.navbar .link {
+    margin: 10px 15px;
+    padding: 5px;
+    color: whitesmoke;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 300;
+}
+
+/* /-----Navbar------ */
+
+/* -----Heading------ */
+
+.titleabout {
+    position: absolute;
+    top: 35%;
+    left: 5%;
+}
+
+.titleabout h1 {
+    position: relative;
+    display: flex;
+    text-transform: uppercase;
+    color: rgb(177, 34, 134);
+    font-size: 50px;
+    font-weight: 600;
+    padding: 0px 15px;
+    z-index: 100;
+}
+
+.titleabout h1:after{
+    content: 'Podcast';
+    position: absolute;
+    top: -50px;
+    left: 250px;
+    height: 80px;
+    padding: 0px 5px;
+    color: white;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    z-index: -100;
+    font-size: 70px;
+    letter-spacing: 5px;
+    text-shadow: rgb(255, 152, 224) 2px 2px 5px;
+    -webkit-text-stroke-color: rgb(253, 156, 211);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 5px;
+}
+
+
+
+header .microphone {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    height: 500px;
+    width: 1100px;
+    padding: 20px 20px;
+    animation-name: phone;
+    animation-timing-function: ease-in; 
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+} 
+
+@keyframes phone {
+    0% {opacity: 0; transform: translateY(-100px)};
+    100% {opacity: 1; transform: translateY(100px)}
+}
+
+
+
+.titleabout .info {
+    max-width: 500px;
+    color: white;
+    font-size: 20px;
+    padding: 0px 15px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    height: 30px;
+    width: 175px;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: white 1px 1px 1px;
+    color: whitesmoke;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    margin: 20px 15px;
+}
+
+.episodes {
+    background-color: rgb(177, 34, 134);
+}
+
+.subscribe {
+    background-color: rgb(253, 156, 211);
+    margin-right: 10px; 
+}
+
+header .smicons {
+   position: absolute;
+   left: 5%;
+   bottom: 0;
+}
+
+header .icons {
+    display: flex;
+    list-style-type: none;
+}
+
+header .icon {
+    font-size: 35px;
+    color: rgb(177, 34, 134);
+    padding: 10px 20px;
+    transition: 0.4s ease all;
+}
+
+header .icon:hover{
+    text-shadow: rgb(253, 156, 211) 10px 10px 0.5px,
+                 whitesmoke 15px -15px 0.5px ;
+    cursor: pointer;
+}
+
